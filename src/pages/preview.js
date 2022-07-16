@@ -6,23 +6,21 @@ const apiHost = "https://gatsbyblog.microcms.io";
 
 const PostPage = (props) => {
   const [post, setPost] = useState(null);
+  // URLSearchParamsはIE11では動きません。
+  // プレビュー環境なので無視しています。
   const params = new URLSearchParams(props.location.search);
   const contentId = params.get("contentId");
   const draftKey = params.get("draftKey");
-  // const apiKey = params.get("apiKey");
-  const apiKey = "9c014f7190704cbcab378bd51ab0b74efc77";
-
+  const apiKey = params.get("apiKey");
+  // const apiKey = "9c014f7190704cbcab378bd51ab0b74efc77";
   useEffect(() => {
-    if (!contentId || !apiKey || !draftKey) {
+    if (!contentId || !apiKey) {
       alert("missing parameters");
       return;
     }
-
-    fetch(`${apiHost}/api/v1/post/${contentId}?draftKey=${draftKey}`
-      // , {
-      // headers: { "X-API-KEY": apiKey },
-      // }
-    )
+    fetch(`${apiHost}/api/v1/post/${contentId}?draftKey=${draftKey}`, {
+      headers: { "X-API-KEY": apiKey },
+    })
       .then((res) => {
         if (!res.ok) throw new Error(res.status + res.statusText);
         return res.json();
@@ -30,7 +28,7 @@ const PostPage = (props) => {
       .then((res) => setPost(res))
       .catch((err) => alert(err));
   }, [apiKey, draftKey, contentId]);
-  if (!post) return <p>Loading</p>;
+  if (!post) return <p>Loadingg</p>;
 
   return (
     <Layout>
