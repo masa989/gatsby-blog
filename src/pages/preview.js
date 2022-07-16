@@ -9,7 +9,7 @@ const PostPage = (props) => {
   const params = new URLSearchParams(props.location.search);
   const contentId = params.get("contentId");
   const draftKey = params.get("draftKey");
-  const apiKey = params.get("apiKey");
+  const apiKey = params.get("queries/draftKey");
 
   useEffect(() => {
     if (!contentId || !apiKey) {
