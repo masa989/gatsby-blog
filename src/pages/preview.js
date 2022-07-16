@@ -8,8 +8,8 @@ const PostPage = (props) => {
   const [post, setPost] = useState(null);
   const params = new URLSearchParams(props.location.search);
   const contentId = params.get("contentId");
-  const draftKey = params.get("draftKey");
-  const apiKey = params.get("queries/draftKey");
+  const draftKey = params.get("queries/draftKey");
+  const apiKey = params.get("apiKey");
 
   useEffect(() => {
     if (!contentId || !apiKey) {
