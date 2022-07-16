@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import Layout from "../components/Layout";
 import PostContent from "../components/PostContent";
-const apiHost = "https://gatsbyblog.microcms.io/";
+const apiHost = "https://gatsbyblog.microcms.io";
 
 const PostPage = (props) => {
   const [post, setPost] = useState(null);
