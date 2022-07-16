@@ -8,18 +8,21 @@ const PostPage = (props) => {
   const [post, setPost] = useState(null);
   const params = new URLSearchParams(props.location.search);
   const contentId = params.get("contentId");
-  const draftKey = params.get("queries/draftKey");
-  const apiKey = params.get("apiKey");
+  const draftKey = params.get("draftKey");
+  // const apiKey = params.get("apiKey");
+  const apiKey = "9c014f7190704cbcab378bd51ab0b74efc77";
 
   useEffect(() => {
-    if (!contentId || !apiKey) {
+    if (!contentId || !apiKey || !draftKey) {
       alert("missing parameters");
       return;
     }
 
-    fetch(`${apiHost}/api/v1/post/${contentId}?draftKey=${draftKey}`, {
-      headers: { "X-API-KEY": apiKey },
-    })
+    fetch(`${apiHost}/api/v1/post/${contentId}?draftKey=${draftKey}`
+      // , {
+      // headers: { "X-API-KEY": apiKey },
+      // }
+    )
       .then((res) => {
         if (!res.ok) throw new Error(res.status + res.statusText);
         return res.json();
