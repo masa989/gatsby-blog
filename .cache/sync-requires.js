@@ -11,6 +11,7 @@ exports.components = {
   "component---src-pages-post-js": preferDefault(require("/Users/shigenomasamichi/react-gatsby/gatsby-blog/src/pages/post.js")),
   "component---src-pages-posts-microcms-category-slug-js": preferDefault(require("/Users/shigenomasamichi/react-gatsby/gatsby-blog/src/pages/posts/{MicrocmsCategory.slug}.js")),
   "component---src-pages-posts-microcms-post-slug-js": preferDefault(require("/Users/shigenomasamichi/react-gatsby/gatsby-blog/src/pages/posts/{MicrocmsPost.slug}.js")),
-  "component---src-pages-preview-js": preferDefault(require("/Users/shigenomasamichi/react-gatsby/gatsby-blog/src/pages/preview.js"))
+  "component---src-pages-preview-js": preferDefault(require("/Users/shigenomasamichi/react-gatsby/gatsby-blog/src/pages/preview.js")),
+  "component---src-templates-posts-js": preferDefault(require("/Users/shigenomasamichi/react-gatsby/gatsby-blog/src/templates/posts.js"))
 }
 

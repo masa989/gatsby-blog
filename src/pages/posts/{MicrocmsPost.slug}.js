@@ -23,7 +23,7 @@ export const query = graphql`
       slug
       title
       content
-      publishedAt(formatString: "YYYY.DD.MM hh:mm")
+      publishedAt(formatString: "YYYY.MM.DD hh:mm")
       category {
         slug
         name

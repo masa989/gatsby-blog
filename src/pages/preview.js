@@ -19,7 +19,7 @@ const PostPage = (props) => {
       return;
     }
     fetch(`${apiHost}/api/v1/post/${contentId}?draftKey=${draftKey}`, {
-      headers: { "X-API-KEY": apiKey },
+      headers: { "X-MICROCMS-API-KEY": apiKey },
     })
       .then((res) => {
         if (!res.ok) throw new Error(res.status + res.statusText);

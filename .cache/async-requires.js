@@ -9,6 +9,7 @@ exports.components = {
   "component---src-pages-post-js": () => import("./../../../src/pages/post.js" /* webpackChunkName: "component---src-pages-post-js" */),
   "component---src-pages-posts-microcms-category-slug-js": () => import("./../../../src/pages/posts/{MicrocmsCategory.slug}.js" /* webpackChunkName: "component---src-pages-posts-microcms-category-slug-js" */),
   "component---src-pages-posts-microcms-post-slug-js": () => import("./../../../src/pages/posts/{MicrocmsPost.slug}.js" /* webpackChunkName: "component---src-pages-posts-microcms-post-slug-js" */),
-  "component---src-pages-preview-js": () => import("./../../../src/pages/preview.js" /* webpackChunkName: "component---src-pages-preview-js" */)
+  "component---src-pages-preview-js": () => import("./../../../src/pages/preview.js" /* webpackChunkName: "component---src-pages-preview-js" */),
+  "component---src-templates-posts-js": () => import("./../../../src/templates/posts.js" /* webpackChunkName: "component---src-templates-posts-js" */)
 }
 
